@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    </head>
+    <body>
+
+        <form method="post" onsubmit="MyFunction()">
+            <label>prvni hodnota</label><input type="number" id="first"><br>
+            <label>druha hodnota</label><input type="number" id="second"><br>
+            <label>treti hodnota</label><input type="number" id="third"><br>
+            <label>vystrelujici hodnota - 200</label>
+            <input type="submit" name="submit">
+        </form>
+        <p id="end"></p>
+        <script>
+            function MyFunction() {
+                var vystrelujici_hodnota = 200;
+                var prvni = $("#first").val();
+                var druha = $("#second").val();
+                var treti = $("#third").val();
+
+                var soucet = parseInt(prvni)+parseInt(druha)+parseInt(treti);
+                while (soucet < 200) {
+                    alert(soucet);
+                    soucet += parseInt(prvni)+parseInt(druha)+parseInt(treti);
+                }
+                alert("vystreleno");
+            }
+        </script>
+
+    </body>
+</html>
